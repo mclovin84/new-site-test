@@ -1,0 +1,179 @@
+---
+description: Full rank-and-rent site builder — interviews me, researches competitors, clones a design, and builds the complete static site
+globs:
+alwaysApply: false
+---
+
+# RANK-AND-RENT SITE BUILDER
+
+When I say **"build a new site"**, **"new site"**, or invoke this rule, run this entire
+pipeline. Do not skip phases. Do not ask me to run separate prompts.
+
+## REFERENCE LIBRARIES
+
+- Competitors: `C:/Users/antho/OneDrive/Attachments/Documents/GitHub/Competitors/`
+  — saved competitor sites organized by niche (e.g. `water-restoration/`), each niche
+  containing `site-1/`, `site-2/`, …
+- Designs: `C:/Users/antho/OneDrive/Attachments/Documents/GitHub/Design/`
+  — saved reference designs to clone, one folder per design (screenshot + saved HTML
+  + real CSS files)
+
+If either path is missing or empty, tell me and stop.
+
+---
+
+## PHASE 0 — INTERVIEW ME FIRST
+
+Before doing anything else, list the available folders so I can choose from real options:
+1. List the folders in the Competitors path → show me the niches
+2. List the folders in the Designs path → show me the design styles
+
+Then ask me these questions **all at once, numbered**, and wait for my answers:
+
+1. **Niche folder** — which folder in Competitors? (from the list above)
+2. **Design folder** — which folder in Design do you want cloned? (from the list above)
+3. **City**
+4. **State**
+5. **Region** (county or metro)
+6. **Business name**
+7. **Domain**
+8. **Phone** — CallRail number, or type `placeholder` for (000) 000-0000
+9. **Owner email** — where form leads go
+10. **Anything else I should know?** (optional)
+
+Do not proceed until I answer. Do not guess values.
+
+---
+
+## PHASE 1 — RESEARCH
+
+**A. Local research.** Work out what's actually true for this niche in this city:
+- Real local reasons customers need this service here (climate, weather, soil, housing
+  age, seasonality, regulations — whatever genuinely applies)
+- Real nearby towns/suburbs in the region this business would serve
+- Things that are NOT true of this city that a generic template might wrongly include
+  (e.g. a landlocked city has no coastal weather; a warm city has no snow load).
+  Keep a running "never mention" list and obey it for the entire build.
+
+**B. Competitor analysis.** Read every site in the chosen niche folder. For each:
+pages, services/sub-services, topics per page, every FAQ, approximate word counts,
+trust signals and content angles.
+
+**C. Coverage map.**
+- Union of ALL topics/services/FAQs across competitors
+- Gaps: covered by only one competitor
+- Missing: covered by none but customers would search for
+- Highest word count reached per page type (this is the floor to beat)
+
+**D. Content plan.** Cover everything they cover PLUS the gaps, at 2–3x depth:
+full page list, sections + target word count per page, full FAQ list.
+
+Print the local research, coverage map, and content plan as a short summary, then
+**continue automatically** to Phase 2. Do not wait for approval unless something is
+genuinely ambiguous.
+
+---
+
+## PHASE 2 — DESIGN EXTRACTION
+
+From the chosen Design folder, study the screenshot + real CSS and extract the ACTUAL
+values (never guess):
+- Exact hex color palette
+- Typography: families, weights, sizes, line-heights. Use Google Fonts equivalents;
+  substitute a similar free font for any licensed one and tell me which.
+- Spacing scale, container widths, section padding
+- Button styles, card styles, shadows, radii
+- Section rhythm and dividers (angled/curved/straight — match it)
+- Header/nav layout, footer layout, hero composition
+- Overall density (airy vs dense) — match it
+
+Write all tokens as CSS custom properties at the top of one shared `/css/style.css`
+so the site can be re-skinned later by changing only those variables.
+
+**DO NOT COPY** from the reference: business name, logo, copy, images, icons, brand
+badges, reviews, ratings, addresses, team photos, JS, or tracking. Design language
+only, fresh markup.
+
+---
+
+## PHASE 3 — BUILD
+
+Plain static HTML. No React, no frameworks, no build step. All text must be real HTML
+in the file — nothing JavaScript-rendered.
+
+**Structure** (one folder per page, each with `index.html`, for clean URLs):
+```
+/                       /residential            /commercial
+/[service-1] … /[service-7 or 8]                /blog
+/blog/[4–6 posts]       /about                  /contact
+/thank-you              /privacy                /terms
+/css/style.css          /sitemap.xml            /robots.txt
+/contact.php
+```
+
+`contact.php`: fields Name, Phone, Email, Service, Message; honeypot field named
+`website`; emails the owner address from Phase 0; redirects to `/thank-you/`.
+
+**Home page sections in order:** hero (H1 "[Service] in [City], [State]" + subhead +
+click-to-call + quote form) → trust strip → services grid → "Signs You Need [Service]"
+→ step-by-step process → why choose us → service area (real nearby towns) → FAQ →
+final CTA + form.
+
+**Write the real content** from the Phase 1 plan — do not leave placeholders. Home
+~1,500 words, each service page ~1,000 words, blog posts ~800 words. Depth means
+broader coverage and more specific local detail, never filler or repetition.
+Original wording throughout — never copy competitor sentences.
+
+**SEO on every page:** unique title `[Page Service] in [City], [State] | [Business]`,
+exactly one H1, unique meta description, canonical + Open Graph, LocalBusiness JSON-LD
+in the footer, correct heading order, internal links between related pages, image
+placeholders with descriptive alt text using the city, `loading="lazy"` below the fold.
+
+**Identical footer NAP on every page, byte-for-byte:**
+`[Business] — Serving [City] & [Region], [State] — [Phone]`
+
+**Always include:** sticky header with logo area, nav, and a large tappable
+click-to-call button; short quote form in every footer; full form on `/contact`;
+mobile-first and fast-loading.
+
+**Animations:** AOS via CDN (fade-up on sections/cards/FAQ with slight stagger),
+CSS hover transitions on buttons and cards, smooth-scroll anchors, respect
+`prefers-reduced-motion`.
+
+---
+
+## HARD RULES (apply to every phase)
+
+**Honesty — this is a brand-new site with no operating history.** Never include, even
+if the design reference or competitors have them:
+- Team/staff/founder photos, or people presented as employees
+- Certifications, licenses, badges, awards, accreditations
+- Reviews, testimonials, star ratings, review counts
+- A street address (city and region only)
+- Project gallery or past-work section
+- Years in business, employee counts, financing offers
+- Guaranteed response times ("on site in 60 minutes")
+- Any claim of owning crews, trucks, technicians, or equipment
+
+Frame the business as **connecting callers with vetted local pros**. Never use
+first-person "we do the work" phrasing ("our crews," "truck-mounted extractors pull
+out the water"). Attribute physical work to the local pros.
+
+Allowed trust claims only: 24/7 service (if the niche warrants), free estimates,
+fast local response.
+
+Where the design reference has a reviews or team section, replace it with
+"Why Choose Us" or an educational section.
+
+---
+
+## FINISH
+
+When the build is complete, print:
+1. Font substitutions made and why
+2. Final CSS color variables
+3. Anything in the reference design you couldn't replicate and how you handled it
+4. **My manual punch list:** images to add (with the exact filenames/paths you
+   referenced), logo file to drop in, CallRail number to swap if I used a placeholder,
+   and the deploy steps (GitHub Desktop → publish private → Hostinger GIT →
+   Search Console → submit sitemap)
