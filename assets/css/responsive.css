@@ -1,0 +1,243 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1365px) and (max-width: 1500px) {
+
+
+}
+/* Normal desktop :1170px. */
+@media (min-width: 1170px) and (max-width: 1299px) {
+
+.top-bar .header-menu ul li a {
+    margin: 45px 20px;
+}
+.slider-area .slider-content .slider-title h1 {
+    font-size: 50px;
+}
+.section-title .sub-title p {
+    font-size: 15px;
+}
+.Director-section .director-content .Director-title p {
+    font-size: 14px;
+}
+.service-area .single-service-box .service-content .service-title p {
+    font-size: 14px;
+}
+.testimonial-area .single-testi-box .testimonial-content .testimonial-title p {
+    font-size: 15px;
+}
+.footer-area .popular-post-content a {
+    font-size: 13px;
+}
+.footer-area .footer-title .footer-tex p {
+    font-size: 14px;
+}
+
+
+
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1170px) {
+.top {
+    margin-bottom: -236px;
+}
+.top-bar .header-menu ul li a {
+    margin: 45px 20px;
+}
+.slider-area .slider-content .slider-title h1 {
+    font-size: 55px;
+}
+.section-title .sub-title p {
+    font-size: 15px;
+}
+.Director-section .director-content .Director-title p {
+    font-size: 13px;
+}
+.service-area .single-service-box .service-content .service-title p {
+    font-size: 13px;
+}
+.testimonial-area .single-testi-box .testimonial-content .testimonial-title p {
+    font-size: 15px;
+}
+.footer-area .footer-title .footer-tex p {
+    font-size: 14px;
+}
+.footer-area .popular-post-content a {
+    font-size: 14px;
+}
+.breadcumb-area .breacumb-content {
+    padding-top: 180px;
+}
+.blog-area .blog-single-box .blog-content .blog-title h3 a {
+    font-size: 14px;
+}
+
+
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.slider-area .slider-content .slider-title h1 {
+    font-size: 40px;
+}
+.slider-area .slider-content .slider-title::before {
+    top: 5px;
+    left: 22%;
+}
+.section-title .sub-title p {
+    font-size: 11px;
+}
+.Director-section .director-content .Director-title h2 {
+    font-size: 20px;
+}
+.Director-section .director-content .Director-title p {
+    font-size: 9px;
+}
+.counter-area .single-counter-box {
+    margin-bottom: 30px;
+}
+.testimonial-area .single-testi-box .testimonial-content .testimonial-title p {
+    font-size: 13px;
+}
+.footer-area {
+    height: 850px;
+}
+.footer-area .footer-title .footer-tex p {
+    font-size: 11px;
+}
+
+
+
+}
+/* small mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+.slider-area .slider-content .slider-title h1 {
+    font-size: 30px;
+}
+.slider-area .slider-content .slider-title::before {
+    top: 12px;
+    left: 13%;
+}
+.section-title .sub-title p {
+    font-size: 14px;
+}
+.Director-section .director-content .Director-title h2 {
+    font-size: 18px;
+}
+.Director-section .director-content .Director-title p {
+    font-size: 11px;
+}
+.counter-area .single-counter-box {
+    margin-bottom: 40px;
+}
+.testimonial-area .single-testi-box .testimonial-content .testimonial-title p {
+    font-size: 14px;
+}
+.pricing-area .single-pricing-box .pricing-content .pricing-title ul li {
+    padding: 0 70px;
+    padding-top: 5px;
+}
+.footer-area .footer-title .footer-tex p {
+    font-size: 14px;
+}
+.Director-section .row.come {
+    left: 67px;
+}
+
+
+
+
+}
+
+
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+.slider-area .slider-content .slider-title h1 {
+    font-size: 29px;
+}
+.slider-area .slider-content .slider-title::before {
+    left: 0;
+}
+.section-title .sub-title p {
+    font-size: 12px;
+}
+.Director-section .row.come {
+    padding: 25px 0px 0px 0px;
+    width: 100%;
+    left: 23px;
+}
+.Director-section .director-content .Director-title h2 {
+    font-size: 20px;
+}
+.Director-section .director-content .Director-title p {
+    font-size: 12px;
+}
+.counter-area .single-counter-box {
+    margin-bottom: 40px;
+}
+.testimonial-area .single-testi-box .testimonial-content .testimonial-title p {
+    font-size: 12px;
+}
+.footer-area .footer-title .footer-tex p {
+    font-size: 12px;
+}
+.footer-area .popular-post-content a {
+    font-size: 14px;
+}
+.footer-area .footer-content .footer-title p {
+    font-size: 12px;
+}
+.section-title .main-title h3 {
+    font-size: 20px;
+}
+.counter-area .single-counter-box .counter-content .counter-title h1 {
+    font-size: 35px;
+}
+.counter-area .single-counter-box .counter-content .counter-title h5 {
+    font-size: 12px;
+}
+.blog-area .blog-single-box .blog-content .blog-title h3 a {
+    font-size: 14px;
+}
+.service-area .single-service-box .service-content .service-title p {
+    font-size: 12px;
+}
+.breadcumb-area .breacumb-content .breadcumb-title h1 {
+    font-size: 40px;
+}
+.em-blog-content {
+    padding: 0;
+}
+.meta-blog a {
+    font-size: 14px;
+}
+.meta-blog-right a {
+    margin-left: 10px;
+}
+.meta-blog-right a {
+    font-size: 13px;
+}
+.blog-page-title p {
+    font-size: 13px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .top{
+    display: none !important;
+}
+.top-bar {
+    display: none !important;
+}
+.menu {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+
+
+}
