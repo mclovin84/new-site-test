@@ -108,37 +108,30 @@
   <!-- Multilen slider / hero -->
   <div class="slider-area d-flex align-items-center">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
+      <div class="row align-items-center hero-split">
+        <div class="col-lg-7">
           <div class="slider-content">
             <div class="slider-title">
               <h4><span>S</span>an Angelo &amp; Tom Green County</h4>
               <h1>Water Damage Restoration in San Angelo, TX</h1>
             </div>
           </div>
-          <div class="slider-button">
-            <a href="tel:+10000000000">call (000) 000-0000</a>
-            &nbsp;&nbsp;
-            <a href="#quote">get a free estimate</a>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Quote form (site requirement) -->
-  <div class="hero-quote" id="quote">
-    <div class="container">
-      <div class="quote-box">
-        <h3>Request Fast Help</h3>
-        <p>Tell us what happened. We'll connect you with a local pro for a free estimate.</p>
-        <form action="contact.php" method="POST">
-          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="row">
-            <div class="col-lg-4 col-md-6"><div class="from-box"><input type="text" name="name" placeholder="Name" required></div></div>
-            <div class="col-lg-4 col-md-6"><div class="from-box"><input type="tel" name="phone" placeholder="Phone" required></div></div>
-            <div class="col-lg-4 col-md-6"><div class="from-box"><input type="email" name="email" placeholder="Email" required></div></div>
-            <div class="col-lg-6 col-md-6">
+        <div class="col-lg-5">
+          <div class="hero-form-box" id="quote">
+            <h3>Request Fast Help</h3>
+            <p>Tell us what happened. We'll connect you with a local pro for a free estimate.</p>
+            <form action="contact.php" method="POST">
+              <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="from-box">
+                <input type="text" name="name" placeholder="Name" required>
+              </div>
+              <div class="from-box">
+                <input type="tel" name="phone" placeholder="Phone" required>
+              </div>
+              <div class="from-box">
+                <input type="email" name="email" placeholder="Email" required>
+              </div>
               <div class="from-box">
                 <select name="service" required>
                   <option value="" disabled selected>Choose a service…</option>
@@ -152,13 +145,16 @@
                   <option>Something else</option>
                 </select>
               </div>
-            </div>
-            <div class="col-lg-6 col-md-12"><div class="from-box"><input type="text" name="message" placeholder="Briefly describe the damage"></div></div>
-            <div class="col-lg-12">
-              <div class="contact-button"><button type="submit">Get My Free Estimate</button></div>
-            </div>
+              <div class="from-box">
+                <textarea name="message" rows="3" placeholder="Briefly describe the damage"></textarea>
+              </div>
+              <p class="hero-form-consent">By submitting, you authorize San Angelo Water Damage Pros to contact you by phone, text, or email about your request. We never sell your information.</p>
+              <div class="contact-button">
+                <button type="submit">Get My Free Estimate</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
